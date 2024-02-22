@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//git test comment
+//dev branch v 1.0
 Route::get('/', function () {
     return view('layouts.main');
 });
