@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//dev branch v 1.0
+//dev branch v 1.1
 Route::get('/', function () {
     return view('layouts.main');
 });
