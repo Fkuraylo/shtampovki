@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//dev branch v 1.1
+//hotfix branch v 1.1
 Route::get('/', function () {
     return view('layouts.main');
 });
