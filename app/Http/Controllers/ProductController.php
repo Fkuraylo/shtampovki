@@ -9,11 +9,12 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index() {
-        return 'Index action';
+        return view('product.index');
     }
 
     public function create() {
-        return 'Create form action';
+
+        return view('product.create');
     }
 
     public function store() {
@@ -21,11 +22,21 @@ class ProductController extends Controller
     }
 
     public function show() {
-        return 'show one action';
+        return view('product.show');
     }
 
     public function edit() {
-        return 'Edit form action';
+        $product = 'prodTest';
+
+        $array = array(
+            'id' => 1,
+            2 => 'sdf',
+            'xxx' => 'yyy'
+        );
+
+        $categories = (object)$array;
+
+        return view('product.edit', compact('product', 'categories'));
     }
 
     public function update() {
