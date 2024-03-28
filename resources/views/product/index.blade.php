@@ -8,11 +8,9 @@
 
         <a class="btn btn-info mt-2 mb-3 text-white" href="{{ route('product.create') }}">Добавить товар</a>
         <div>
-            {{--        @foreach($products as $product)--}}
-            {{--            <div class=""><a href="{{ route('product.show', $product->id) }}">{{ $product->id }}. {{ $product->name }}</a></div>--}}
-            {{--            <hr>--}}
-            {{--        @endforeach--}}
-
+            @foreach($products as $product)
+                <div>{{ $product->id }}. <a href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a></div>
+            @endforeach
         </div>
     </div>
 
