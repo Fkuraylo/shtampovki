@@ -31,17 +31,16 @@
                 </ul>
 
 
-
             </div>
         </nav>
 
 
-        @section('sidebar')
-            This is the master sidebar.
-        @show
 
+
+        @yield('zalupa')
 
         @yield('content')
+
 
     </div>
 
