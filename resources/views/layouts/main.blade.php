@@ -34,10 +34,7 @@
             </div>
         </nav>
 
-
-
-
-        @yield('zalupa')
+        @yield('conti')
 
         @yield('content')
 
