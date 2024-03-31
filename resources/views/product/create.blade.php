@@ -34,8 +34,9 @@
         <div class="form-group mt-3">
             <label for="category">Категория</label>
             <select class="form-control" name="category" id="category_id">
-                <option value="">df</option>
-                <option value="">ff</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
             </select>
         </div>
         <div class="form-group mt-3">
