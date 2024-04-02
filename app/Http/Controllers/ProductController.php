@@ -20,7 +20,7 @@ class ProductController extends Controller
     }
 
     public function store() {
-        return 'Save to db action';
+    // TODO implement function store
     }
 
     public function show() {
