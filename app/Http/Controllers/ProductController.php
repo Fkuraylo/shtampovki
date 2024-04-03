@@ -20,7 +20,8 @@ class ProductController extends Controller
     }
 
     public function store() {
-    // TODO implement function store
+        //сохранение в базу данных
+
     }
 
     public function show() {
