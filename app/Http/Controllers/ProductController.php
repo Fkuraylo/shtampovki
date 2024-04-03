@@ -22,6 +22,7 @@ class ProductController extends Controller
     public function store() {
         //сохранение в базу данных
 
+
     }
 
     public function show() {
