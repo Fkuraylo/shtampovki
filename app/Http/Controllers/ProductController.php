@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\Product\StoreRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -19,10 +20,11 @@ class ProductController extends Controller
         return view('product.create', compact('categories'));
     }
 
-    public function store() {
-        //сохранение в базу данных
-
-
+    public function store(StoreRequest $request) {
+        //TODO: save the data from request to db
+        $data = $request->validated();
+        Product::create($data);
+        return redirect()->route('product.index');
     }
 
     public function show() {

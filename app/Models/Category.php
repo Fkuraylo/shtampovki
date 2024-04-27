@@ -12,7 +12,7 @@ class Category extends Model
     protected $table = 'categories';
     protected $guarded = false;
 
-    public function products() {
-        return $this->hasMany(Product::class, 'category_id', 'id');
+    public function Products() {
+        return $this->hasMany(Product::class);
     }
 }

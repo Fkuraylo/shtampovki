@@ -13,6 +13,6 @@ class Product extends Model
     protected $guarded = false;
 
     public function Category() {
-        return $this->belongsTo(Category::class, 'category_id', 'id');
+        return $this->belongsTo(Category::class);
     }
 }
