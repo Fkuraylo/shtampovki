@@ -21,7 +21,6 @@ class ProductController extends Controller
     }
 
     public function store(StoreRequest $request) {
-        //TODO: save the data from request to db
         $data = $request->validated();
         Product::create($data);
         return redirect()->route('product.index');
