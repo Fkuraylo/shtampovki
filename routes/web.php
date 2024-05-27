@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WaistBagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.main');
 });
+
+Route::get('/bag', [WaistBagController::class, 'open'])->name('bag.open');
 
 Route::get('/products', [ProductController::class, 'index'])->name('product.index');
 Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');

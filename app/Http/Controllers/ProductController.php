@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\Product\StoreRequest;
+use App\Http\Requests\Product\UpdateRequest;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -26,26 +28,22 @@ class ProductController extends Controller
         return redirect()->route('product.index');
     }
 
-    public function show() {
-        return view('product.show');
+    public function show(Product $product) {
+        $categories = Category::all();
+        return view('product.show', compact('product', 'categories'));
     }
 
-    public function edit() {
-        $product = 'prodTest';
+    public function edit(Product $product) {
+        $categories = Category::all();
+        $tags = Tag::all();
 
-        $array = array(
-            'id' => 1,
-            2 => 'sdf',
-            'xxx' => 'yyy'
-        );
-
-        $categories = (object)$array;
-
-        return view('product.edit', compact('product', 'categories'));
+        return view('product.edit', compact('product', 'categories', 'tags'));
     }
 
-    public function update() {
-        return 'Save editing to db';
+    public function update(UpdateRequest $request, Product $product) {
+        //$data = $request->validated();
+
+        return redirect()->route('product.index');
     }
 
     public function destroy() {

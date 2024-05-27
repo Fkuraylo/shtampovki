@@ -17,16 +17,16 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ route('product.index') }}">Index Action</a>
+                <a class="navbar-brand" href="{{ route('product.index') }}">All products</a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"
-                           href="{{ route('product.create') }}">Create Action</a>
+                           href="{{ route('product.create') }}">New product</a>
 
                     </li>
                     <li>
                         <a class="nav-link active" aria-current="page"
-                           href="{{ route('product.show', 1) }}">Show Action</a>
+                           href="{{ route('product.show', 1) }}">Show product</a>
                     </li>
                 </ul>
 
